@@ -30,9 +30,9 @@ export default function Home() {
             <span className="text-red-500"> Junk Removal</span> Experts
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Fast, affordable, and eco-friendly junk hauling.
+            Fast, efficient, and eco-friendly junk hauling.
             <br />
-            <strong className="text-green-400">Open 24 Hours</strong> — We&apos;re here when you need us!
+            <strong className="text-green-400">7 AM - 7 PM Daily</strong> — Text photos for instant quotes!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -42,10 +42,10 @@ export default function Home() {
               📞 Call For Free Quote
             </a>
             <a
-              href="#services"
-              className="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors"
+              href="sms:6614447965"
+              className="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors inline-flex items-center justify-center gap-2"
             >
-              View Services
+              📱 Text Photos for Quote
             </a>
           </div>
         </div>
@@ -56,8 +56,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div className="flex flex-col items-center">
             <span className="text-3xl mb-2">⏰</span>
-            <span className="font-semibold text-gray-800">Open 24/7</span>
-            <span className="text-sm text-gray-600">Always Available</span>
+            <span className="font-semibold text-gray-800">7 AM - 7 PM</span>
+            <span className="text-sm text-gray-600">Every Day</span>
           </div>
           <div className="flex flex-col items-center">
             <span className="text-3xl mb-2">⚡</span>
@@ -67,12 +67,12 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <span className="text-3xl mb-2">💰</span>
             <span className="font-semibold text-gray-800">Free Quotes</span>
-            <span className="text-sm text-gray-600">No Obligation</span>
+            <span className="text-sm text-gray-600">No Hidden Fees</span>
           </div>
           <div className="flex flex-col items-center">
             <span className="text-3xl mb-2">♻️</span>
             <span className="font-semibold text-gray-800">Eco-Friendly</span>
-            <span className="text-sm text-gray-600">We Recycle</span>
+            <span className="text-sm text-gray-600">We Recycle & Donate</span>
           </div>
         </div>
       </section>
@@ -81,24 +81,66 @@ export default function Home() {
       <section id="services" className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            What We <span className="text-red-600">Haul Away</span>
+            Our <span className="text-red-600">Services</span>
           </h2>
           <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
             From single items to full property cleanouts, we handle it all. No job is too big or too small.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: "🛋️", title: "Furniture Removal", desc: "Sofas, mattresses, desks, chairs, and more" },
-              { icon: "🔧", title: "Appliance Hauling", desc: "Refrigerators, washers, dryers, AC units" },
-              { icon: "🏠", title: "Estate Cleanouts", desc: "Full property cleanouts and hoarding cleanup" },
-              { icon: "🌿", title: "Yard Waste", desc: "Branches, leaves, dirt, and landscaping debris" },
-              { icon: "🏗️", title: "Construction Debris", desc: "Drywall, lumber, tiles, and renovation waste" },
-              { icon: "📦", title: "General Junk", desc: "Miscellaneous items, clutter, and trash" },
+              { icon: "🏠", title: "Residential Junk Removal", desc: "Furniture, appliances, yard waste, and household items" },
+              { icon: "🏢", title: "Commercial Junk Removal", desc: "Office furniture, electronics, and business debris" },
+              { icon: "🔑", title: "Realtor & Property Cleanouts", desc: "Full property cleanouts for realtors and managers" },
+              { icon: "🏗️", title: "Demolition Services", desc: "Residential and commercial tear-downs" },
+              { icon: "🗑️", title: "Dumpster Rentals", desc: "Residential, commercial, and construction projects" },
+              { icon: "💦", title: "Power Washing", desc: "Driveways, sidewalks, homes, and commercial properties" },
             ].map((service, i) => (
               <div key={i} className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow">
                 <span className="text-4xl mb-4 block">{service.icon}</span>
                 <h3 className="font-bold text-xl mb-2">{service.title}</h3>
                 <p className="text-gray-600">{service.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Items We Accept */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            What We <span className="text-red-600">Haul Away</span>
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            {[
+              "Appliances", "Furniture", "Electronics", "Yard Waste",
+              "Hot Tubs", "Mattresses", "Construction Debris", "Pool Tables",
+              "Refrigerators", "Washers/Dryers", "TVs & Computers", "Cardboard"
+            ].map((item, i) => (
+              <div key={i} className="bg-white p-4 rounded-lg shadow-sm">
+                <span className="text-gray-700 font-medium">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            What Our <span className="text-red-600">Customers Say</span>
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: "John M.", text: "Fast, professional, and affordable. They cleared out my garage in no time!" },
+              { name: "Sara T.", text: "On-time arrival and left my property spotless. Highly recommend!" },
+              { name: "David P.", text: "Efficient office cleanup. The team was courteous and hardworking." },
+            ].map((testimonial, i) => (
+              <div key={i} className="bg-gray-50 p-6 rounded-xl">
+                <div className="text-yellow-500 mb-4">⭐⭐⭐⭐⭐</div>
+                <p className="text-gray-700 mb-4">&ldquo;{testimonial.text}&rdquo;</p>
+                <p className="font-semibold text-gray-900">— {testimonial.name}</p>
               </div>
             ))}
           </div>
@@ -117,7 +159,7 @@ export default function Home() {
                 ✓
               </div>
               <div>
-                <h3 className="font-bold text-xl mb-2">Upfront Pricing</h3>
+                <h3 className="font-bold text-xl mb-2">Transparent Pricing</h3>
                 <p className="text-gray-400">No hidden fees or surprise charges. We quote before we haul.</p>
               </div>
             </div>
@@ -127,7 +169,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="font-bold text-xl mb-2">Local & Reliable</h3>
-                <p className="text-gray-400">Proudly serving Bakersfield, Oildale, and surrounding areas.</p>
+                <p className="text-gray-400">Proudly serving Bakersfield, Oildale, and all of Kern County.</p>
               </div>
             </div>
             <div className="flex gap-4">
@@ -135,8 +177,8 @@ export default function Home() {
                 ✓
               </div>
               <div>
-                <h3 className="font-bold text-xl mb-2">Fast Response</h3>
-                <p className="text-gray-400">Same-day service available. We work on your schedule.</p>
+                <h3 className="font-bold text-xl mb-2">Eco-Friendly</h3>
+                <p className="text-gray-400">We prioritize recycling and donation options whenever possible.</p>
               </div>
             </div>
             <div className="flex gap-4">
@@ -144,8 +186,8 @@ export default function Home() {
                 ✓
               </div>
               <div>
-                <h3 className="font-bold text-xl mb-2">Clean & Professional</h3>
-                <p className="text-gray-400">We leave your space spotless after every job.</p>
+                <h3 className="font-bold text-xl mb-2">Easy SMS Quotes</h3>
+                <p className="text-gray-400">Text photos of your junk to (661) 444-7965 for fast estimates.</p>
               </div>
             </div>
           </div>
@@ -159,9 +201,9 @@ export default function Home() {
             Serving <span className="text-red-600">Bakersfield</span> & Beyond
           </h2>
           <p className="text-gray-600 mb-8">
-            We proudly serve Oildale, Bakersfield, and the greater Kern County area.
+            We proudly serve Bakersfield, Oildale, and the greater Kern County area.
           </p>
-          <div className="bg-gray-100 p-6 rounded-xl">
+          <div className="bg-gray-100 p-6 rounded-xl mb-6">
             <p className="font-semibold text-lg mb-2">📍 800 Grant Dr, Bakersfield, CA 93308</p>
             <a
               href="https://maps.google.com/?q=800+Grant+Dr,+Bakersfield,+CA+93308"
@@ -171,6 +213,11 @@ export default function Home() {
             >
               Get Directions →
             </a>
+          </div>
+          <div className="flex flex-wrap justify-center gap-2 text-sm">
+            {["Bakersfield", "Oildale", "Shafter", "Wasco", "Taft", "Arvin", "Lamont"].map((area, i) => (
+              <span key={i} className="bg-gray-200 px-3 py-1 rounded-full text-gray-700">{area}</span>
+            ))}
           </div>
         </div>
       </section>
@@ -182,14 +229,22 @@ export default function Home() {
             Ready to Clear the Clutter?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Get your free, no-obligation quote today. We&apos;re available 24/7!
+            Get your free, no-obligation quote today. Call or text photos!
           </p>
-          <a
-            href="tel:6614447965"
-            className="bg-white text-red-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-xl transition-colors inline-flex items-center gap-3"
-          >
-            📞 (661) 444-7965
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:6614447965"
+              className="bg-white text-red-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-xl transition-colors inline-flex items-center justify-center gap-3"
+            >
+              📞 (661) 444-7965
+            </a>
+            <a
+              href="mailto:Dominique@scorpionjunkremoval.com"
+              className="border-2 border-white hover:bg-white hover:text-red-600 px-8 py-4 rounded-lg font-bold text-lg transition-colors inline-flex items-center justify-center gap-2"
+            >
+              ✉️ Email Us
+            </a>
+          </div>
         </div>
       </section>
 
@@ -203,18 +258,19 @@ export default function Home() {
                 <span className="font-bold text-lg">Scorpion Junk Removal</span>
               </div>
               <p className="text-gray-400">
-                Professional junk removal service in Bakersfield, CA. Fast, affordable, and eco-friendly.
+                Professional junk removal service in Bakersfield, CA. Fast, efficient, and eco-friendly.
               </p>
             </div>
             <div>
               <h4 className="font-bold mb-4">Contact</h4>
               <p className="text-gray-400 mb-2">📞 (661) 444-7965</p>
+              <p className="text-gray-400 mb-2">✉️ Dominique@scorpionjunkremoval.com</p>
               <p className="text-gray-400 mb-2">📍 800 Grant Dr, Bakersfield, CA 93308</p>
-              <p className="text-gray-400">⏰ Open 24 Hours</p>
+              <p className="text-gray-400">⏰ 7 AM - 7 PM Daily</p>
             </div>
             <div>
               <h4 className="font-bold mb-4">Service Areas</h4>
-              <p className="text-gray-400">Bakersfield • Oildale • Shafter • Delano • Wasco • Arvin • Lamont</p>
+              <p className="text-gray-400">Bakersfield • Oildale • Shafter • Wasco • Taft • Arvin • Lamont</p>
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
