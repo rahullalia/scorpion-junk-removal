@@ -190,5 +190,28 @@ const config = {
 
 ---
 
+## Session Log
+
+### 2024-12-14 - Initial Build & Documentation
+**Completed:**
+- Built complete landing page from scratch (Next.js 16 + Tailwind v4)
+- Initially created dark theme with glassmorphism, then converted to light theme based on demographic analysis
+- Mobile-first responsive optimization for Google Business Profile traffic
+- Removed dashes from phone numbers (661.444.7965 format)
+- Connected to GitHub (`rahullalia/scorpion-junk-removal`)
+- Deployed to Vercel with auto-deploy on push
+- Created comprehensive CLAUDE.md and README.md
+
+**Key Decisions:**
+- Light theme chosen over dark for Bakersfield's older/family demographic
+- Phone/text CTAs over contact form (faster for junk removal)
+- Hero image appears first on mobile for visual impact
+- 2-column service grid on mobile for better fit
+
+**No outstanding tasks** - project is complete and live.
+
+---
+
 **Project Location:** `/Users/rahullalia/Developer/1-Projects/rslClients/scorpionJunkRemoval/`
 **Project Type:** Client deliverable (time-bound, 1-Project)
+**Last Updated:** 2024-12-14
